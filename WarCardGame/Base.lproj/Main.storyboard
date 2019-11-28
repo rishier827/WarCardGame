@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WarCardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="pe3-vP-XUR">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Hrf-pa-7l3">
+                                <rect key="frame" x="146" y="64" width="122" height="67"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YH9-C6-zKd" userLabel="Card abd Button Stack View">
+                                <rect key="frame" x="72" y="175" width="270" height="221"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="NNP-fs-Ijn">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="170"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card5" translatesAutoresizingMaskIntoConstraints="NO" id="qKc-V5-PUW">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card7" translatesAutoresizingMaskIntoConstraints="NO" id="Uc0-2Q-Nvc">
+                                                <rect key="frame" x="150" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYL-HZ-lY1">
+                                        <rect key="frame" x="94.333333333333343" y="190" width="81.666666666666657" height="31"/>
+                                        <state key="normal" backgroundImage="dealbutton"/>
+                                        <connections>
+                                            <action selector="dealTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VfM-yW-yXN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="264" translatesAutoresizingMaskIntoConstraints="NO" id="4d4-GI-faq">
+                                <rect key="frame" x="39" y="426" width="337.33333333333331" height="68.333333333333314"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="V1l-GC-7nb" userLabel="CPUStack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="39" height="68.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQu-Qp-g3N" userLabel="Point">
+                                                <rect key="frame" x="0.0" y="0.0" width="39" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgZ-SC-XLB" userLabel="0">
+                                                <rect key="frame" x="0.0" y="20.333333333333314" width="39" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Eyu-c7-4FZ" userLabel="PointStack View">
+                                        <rect key="frame" x="303" y="0.0" width="34.333333333333314" height="68.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="CPU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWp-Zv-XJ8">
+                                                <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAq-Ij-o2f">
+                                                <rect key="frame" x="0.0" y="20.333333333333314" width="34.333333333333336" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pe3-vP-XUR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BfA-d7-bWv"/>
+                            <constraint firstItem="Hrf-pa-7l3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Icm-Tj-syK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pe3-vP-XUR" secondAttribute="trailing" id="LWS-tk-3wx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4d4-GI-faq" secondAttribute="bottom" constant="367.67000000000002" id="NLb-R6-ZGo"/>
+                            <constraint firstItem="4d4-GI-faq" firstAttribute="top" secondItem="YH9-C6-zKd" secondAttribute="bottom" constant="30" id="Ptx-Wq-bpK"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="pe3-vP-XUR" secondAttribute="bottom" id="QIb-cn-Zg1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4d4-GI-faq" secondAttribute="trailing" constant="37.670000000000002" id="V5b-Ov-TXs"/>
+                            <constraint firstItem="4d4-GI-faq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="YjZ-77-2FU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hrf-pa-7l3" secondAttribute="trailing" constant="146" id="cvZ-a4-KvJ"/>
+                            <constraint firstItem="4d4-GI-faq" firstAttribute="top" secondItem="YH9-C6-zKd" secondAttribute="bottom" constant="30" id="dyZ-HT-AsX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YH9-C6-zKd" secondAttribute="trailing" constant="72" id="e8J-ZX-ZQy"/>
+                            <constraint firstItem="Hrf-pa-7l3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="fPv-zx-PKk"/>
+                            <constraint firstItem="YH9-C6-zKd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ipu-xK-9E9"/>
+                            <constraint firstItem="YH9-C6-zKd" firstAttribute="top" secondItem="Hrf-pa-7l3" secondAttribute="bottom" constant="44" id="jgH-MI-sOm"/>
+                            <constraint firstItem="Hrf-pa-7l3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="mMm-Dp-LVn"/>
+                            <constraint firstItem="pe3-vP-XUR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="mZu-mO-s3R"/>
+                            <constraint firstItem="YH9-C6-zKd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="y0k-QO-fq5"/>
+                            <constraint firstItem="4d4-GI-faq" firstAttribute="top" secondItem="YH9-C6-zKd" secondAttribute="bottom" constant="305" id="yy0-jq-TgM"/>
+                            <constraint firstItem="Hrf-pa-7l3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ztR-wa-HbP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="LeftImageView" destination="qKc-V5-PUW" id="y24-B9-Qad"/>
+                        <outlet property="LeftScoreView" destination="tgZ-SC-XLB" id="Z35-TH-Jle"/>
+                        <outlet property="RightImageView" destination="Uc0-2Q-Nvc" id="z1D-eQ-hsv"/>
+                        <outlet property="RightScoreView" destination="BAq-Ij-o2f" id="lvc-2f-THb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="127"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="414" height="896"/>
+        <image name="card5" width="120" height="170"/>
+        <image name="card7" width="120" height="170"/>
+        <image name="dealbutton" width="81.666664123535156" height="31"/>
+        <image name="logo" width="122" height="67"/>
+    </resources>
+</document>
